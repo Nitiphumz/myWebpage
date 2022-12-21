@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Testlightswitch </title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            #Background {
+                width: 400px;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-style: solid;
+                border-color: rgb(255, 123, 0);
+            }
+
+            #Box {}
+
+            #Textlightswitch {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+
+            #Textlightswitch h3 {
+                font-size: 1.5rem;
+                font-weight: bolder;
+            }
+
+            #myImage {
+                display: block;
+                margin: auto;
+            }
+
+            #Box-button {
+                display: flex;
+                justify-content: center;
+            }
+
+            #Box-button button {
+                margin: 0 10px;
+                font-size: 1.2rem;
+                padding: 10px 25px;
+                border-radius: 10px;
+                background-color: rgb(226, 226, 226);
+                border-style: solid;
+                border-color: rgb(255, 123, 0);
+            }
+
+            #MyName {
+                justify-content: center;
+            }
+            
+        </style>
+    
+    <body>
+        <script>
+        function light(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "pic_bulboff.gif"
+                document.getElementById('Background').style.backgroundColor = "gray";
+                document.getElementById('Textswitch').innerText = "OFF";
+            } else {
+                pic = "pic_bulbon.gif"
+                document.getElementById('Background').style.backgroundColor = "";
+                document.getElementById('Textswitch').innerText = "ON";
+            }     
+                document.getElementById('myImage').src = pic;
+        }
+        </script>
+
+    <div id="Background" style="background-color: gray;" >
+      <div id="Box">
+        <div id="Textlightswitch" >
+            <h3 id="Textswitch"> Off </h3>
+        </div>
+            <img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+
+        <p>
+        <div id="Box-button">
+            <button type="button" onclick="light(1)"> On </button>
+            <button type="button" onclick="light(0)"> Off </button>
+        </div>
+        <h3 id="MyName" > My Name: (64312796,Nitiphumi Intakanok) </h3>
+      </div>
+    </div>
+    </p>
+    </body>
+
+    </head>
+</html>
